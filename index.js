@@ -42,7 +42,8 @@ inquirer
   ])
   .then((data) => {
     console.log(data.shape);
-    //
+
+    // Create shape classes
     let shape;
     if (data.shape === "Circle") {
       shape = new Circle(data.shapeColor, data.textColor, data.logoText);
@@ -54,11 +55,14 @@ inquirer
       shape = new Square(data.shapeColor, data.textColor, data.logoText);
     }
 
-    fs.writeFile("./output/logo.svg", shape.render(), (err) =>
-      err
-        ? console.error(err)
-        : console.log(
-            "\x1b[32mSVG file generated, saved to output folder as 'logo.svg'\x1b[0m"
-          )
-    );
+    // Render output
+    fs.writeFile("./output/logo.svg", shape.renderSVG(), (err) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(
+          "\x1b[32mSVG file generated, saved to output folder as 'logo.svg'\x1b[0m"
+        );
+      }
+    });
   });
