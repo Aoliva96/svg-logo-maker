@@ -22,7 +22,7 @@ inquirer
       name: "textColor",
       type: "input",
       message:
-        "Please input a color for your text (blue, purple, red, orange, yellow, green, black, white, or enter a specific hexadecimal color code):",
+        "Please input a basic color for your text (blue, purple, red, orange, yellow, green, black, white), or use hexadecimal (example: #ff00ff or #f0f for fuchsia):",
       validate: colorVal,
     },
     {
@@ -36,7 +36,7 @@ inquirer
       name: "shapeColor",
       type: "input",
       message:
-        "Please input a color for your background shape (blue, purple, red, orange, yellow, green, black, white, or enter a specific hexadecimal color code):",
+        "Please input a basic color for your background shape (blue, purple, red, orange, yellow, green, black, white), or use hexadecimal (example: #ff00ff or #f0f for fuchsia):",
       validate: colorVal,
     },
   ])
