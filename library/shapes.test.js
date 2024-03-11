@@ -89,7 +89,7 @@ describe("Square", () => {
       const shape = new Square("blue");
       shape.shapeColor = "blue";
       expect(shape.renderSqrColor()).toEqual(
-        '<rect = x="80" y="30" width="140" height="140" fill="blue" />'
+        '<rect x="80" y="30" width="140" height="140" fill="blue" />'
       );
     });
   });
@@ -102,7 +102,7 @@ describe("Square", () => {
       const shape = new Square("blue");
       shape.textColor = "blue";
       expect(shape.renderTextColor()).toEqual(
-        '<text x="150" y="125" font-size="60" text-anchor="middle" fill="blue">'
+        '<text x="150" y="125" font-size="60" text-anchor="middle" fill="blue" >'
       );
     });
   });

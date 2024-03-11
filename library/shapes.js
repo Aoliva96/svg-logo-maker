@@ -13,7 +13,7 @@ class Circle extends Shape {
     super(shapeColor, textColor, logoText);
   }
   renderCirColor() {
-    return `<circle cx="150" cy="100" r="80"  fill="${this.shapeColor}" />`;
+    return `<circle cx="150" cy="100" r="80" fill="${this.shapeColor}" />`;
   }
   renderTextColor() {
     return `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.textColor}">`;
