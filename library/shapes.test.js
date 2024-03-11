@@ -119,7 +119,7 @@ describe("Square", () => {
   });
 });
 
-// User input validation
+// User text input validation
 describe("inputVal", () => {
   it("should error if no text is entered by the user", () => {
     const noChar = [""];
@@ -153,6 +153,46 @@ describe("inputVal", () => {
     const threeChar = ["ABC"];
     threeChar.forEach((data) => {
       expect(inputVal(data)).toEqual(true);
+    });
+  });
+});
+
+// User color input validation
+describe("colorVal", () => {
+  it("should return true if the user enters one of the basic colors described in the prompt", () => {
+    const basicColors = [
+      "blue",
+      "purple",
+      "red",
+      "orange",
+      "yellow",
+      "green",
+      "black",
+      "white",
+    ];
+    basicColors.forEach((color) => {
+      expect(colorVal(color)).toEqual(true);
+    });
+  });
+  it("should return true if the user enters a valid hexadecimal color code", () => {
+    const hexColors = [
+      "#FFFFFF",
+      "#000000",
+      "#FF00FF",
+      "#F0F",
+      "#FF0303",
+      "#F33",
+    ];
+    hexColors.forEach((color) => {
+      expect(colorVal(color)).toEqual(true);
+    });
+  });
+  it("should return an error if the color or hex code entered are invalid", () => {
+    const invalidColors = ["invalid", "GGGGGGG"];
+    invalidColors.forEach((data) => {
+      expect(colorVal(data)).toEqual(
+        "Please input a named basic color, or a hexadecimal color code starting with '#'"
+      );
     });
   });
 });
