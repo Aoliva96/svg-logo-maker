@@ -118,3 +118,41 @@ describe("Square", () => {
     });
   });
 });
+
+// User input validation
+describe("inputVal", () => {
+  it("should error if no text is entered by the user", () => {
+    const noChar = [""];
+    noChar.forEach((data) => {
+      expect(inputVal(data)).toEqual(
+        "Logo text required, please input up to 3 characters"
+      );
+    });
+  });
+  it("should return an error if more than 3 characters are entered by the user", () => {
+    const fourChar = ["ABCD"];
+    fourChar.forEach((data) => {
+      expect(inputVal(data)).toEqual(
+        "Character limit exceeded, please input up to 3 characters"
+      );
+    });
+  });
+  it("should return true if 1 character is entered by the user", () => {
+    const oneChar = ["A"];
+    oneChar.forEach((data) => {
+      expect(inputVal(data)).toEqual(true);
+    });
+  });
+  it("should return true if 2 characters are entered by the user", () => {
+    const twoChar = ["AB"];
+    twoChar.forEach((data) => {
+      expect(inputVal(data)).toEqual(true);
+    });
+  });
+  it("should return true if 2 characters are entered by the user", () => {
+    const threeChar = ["ABC"];
+    threeChar.forEach((data) => {
+      expect(inputVal(data)).toEqual(true);
+    });
+  });
+});
