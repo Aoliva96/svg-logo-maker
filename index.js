@@ -13,7 +13,7 @@ const {
 inquirer
   .prompt([
     {
-      name: "text",
+      name: "logoText",
       type: "input",
       message: "Please input up to three letters for your logo's text:",
       validate: inputVal,
