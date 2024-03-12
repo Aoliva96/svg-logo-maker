@@ -47,7 +47,7 @@ I rectified the above problems in the following way:
 
 See below for a demo video of the project functionality:
 
-[Click link to view demo](#)
+[Click link to view demo](https://app.screencastify.com/v3/watch/oWj5x7i9tJElgLKZJDID)
 
 ## Deployment
 
